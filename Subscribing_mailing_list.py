@@ -15,11 +15,11 @@ with requests.Session() as c:
     c.post(url,data=login_data,stream=True)
     print("\nCheck your mail for further instructions!")
 
-#confirming mail:
+#confirming subscription by replying to the mail:
     
 a=input("\nEnter the code of the subject you recieved in your mail: ")
 b="CONFIRM "+a
-fromaddr="minkushtest@gmail.com"
+fromaddr=" "  # Enter sender's email address
 toaddr="debian-outreach-request@lists.debian.org"
 msg = MIMEMultipart()
 msg['From'] = fromaddr
@@ -31,7 +31,7 @@ msg.attach(MIMEText(body, 'plain'))
  
 server = smtplib.SMTP('smtp.gmail.com', 587)
 server.starttls()
-server.login(fromaddr, "minkush1234")
+server.login(fromaddr, " ")    #Enter password of sender's email in " "
 text = msg.as_string()
 server.sendmail(fromaddr, toaddr, text)
 server.quit()
