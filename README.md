@@ -17,4 +17,22 @@ After entering the mail, the program would then ask for the confirmation string 
 
 The user would hence get succesfully subscribed to the mailing list :smiley:
 
+Here is an test case image showing its working:
+
+![alt text](https://github.com/minkushjain/gsoc-debian/blob/master/img/program.png)
+
+### GUI for Application
+
+Excecute the file "recieving_mail_final.py" to run the PyQt GUI. Enter the user's email in the text box and hit on subscribe. The user would receive the mail with the confirmation key.
+
+The file "subscribe.ui" contains the code for the pyqt dialog box and "learning_requests1.py" is the supporting file for the main program.
+
+Here is the pic of the pop-up dialog box (GUI):
+
+![alt text](https://github.com/minkushjain/gsoc-debian/blob/master/img/gui.PNG)
+
+PS: Refer my [blog](http://minkush.me/python-script-gsoc-mailing-list.html) to see the script's explanation in detail along with its working.
+
+
+
 
