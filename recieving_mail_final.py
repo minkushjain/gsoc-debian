@@ -15,7 +15,7 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
 
     def mail(self):
         email1 = self.email_box.text()
-        learning_requests1.pranav(email1)
+        learning_requests1.input_data(email1)
         final_message=("Congrats,check your mail for further instructions.")
         self.results_window.setText(final_message)
     
