@@ -7,9 +7,10 @@ print("Welcome to GSoC 2018")
 print("Project: Wizard/GUI Helping Students get Started\n")
 print("This is a program to automate the process of subscription to the mailing list.\n")
 
+#Submitting user email on the website:
 with requests.Session() as c:
     url="https://lists.debian.org/cgi-bin/subscribe.pl"
-    email=input("Enter you E-mail: ")
+    email=input("Enter you E-mail: ")    #enter user's email
     c.get(url)
     login_data={'user_email':email, 'list':'debian-outreach', 'action':'Subscribe'}
     c.post(url,data=login_data,stream=True)
@@ -29,7 +30,7 @@ msg['Subject'] = b
 body = "Subscribe"
 msg.attach(MIMEText(body, 'plain'))
  
-server = smtplib.SMTP('smtp.gmail.com', 587)
+server = smtplib.SMTP('smtp.gmail.com', 587)   #connects to server using port 587
 server.starttls()
 server.login(fromaddr, " ")    #Enter password of sender's email in " "
 text = msg.as_string()
