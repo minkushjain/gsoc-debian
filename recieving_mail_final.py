@@ -1,8 +1,8 @@
 import sys
-from PyQt5 import QtCore, QtGui, QtWidgets, uic
+from PyQt5 import QtCore, QtGui, QtWidgets, uic     #importing pyqt libraries
 from PyQt5.QtWidgets import QApplication,QMainWindow,QLineEdit
-import learning_requests1
-qtCreatorFile = "subscribe.ui"
+import learning_requests1      #importing supporting file with defined functions
+qtCreatorFile = "subscribe.ui"    #.ui file with the GUI program
  
 Ui_MainWindow, QtBaseClass = uic.loadUiType(qtCreatorFile)
  
